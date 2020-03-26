@@ -1,0 +1,14 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-image: url(../img/3299923.jpg);
+    background-position: center center;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
