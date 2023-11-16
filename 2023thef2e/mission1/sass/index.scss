@@ -1,0 +1,146 @@
+@import "../sass/normalize";
+@import "../sass/global";
+
+body {
+    border: 5px solid $primary_color;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 10;
+
+    .header_block {
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div {
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+
+        li {
+            cursor: pointer;
+            display: block;
+            padding: 0px 0;
+            margin: 0 20px;
+            box-sizing: border-box;
+            position: relative;
+
+            &.active {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    bottom: -10px;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $primary_color;
+                }
+            }
+        }
+    }
+
+
+    button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 30px;
+        background-color: $primary_color;
+
+        p {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    }
+}
+
+main {
+    background-color: #E3E3E3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#main-view {
+    height: 684px;
+
+    img {
+        position: absolute;
+    }
+}
+
+#activity {
+    transform: translateY(-50%);
+    top: 24%;
+}
+
+#slogan {
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#chinese_name {
+    top: 30px;
+    right: 0;
+}
+
+#english_name {
+    left: 40px;
+    bottom: 30px;
+}
+
+#candidate {
+    top: 30px;
+    right: 70px;
+    z-index: 2;
+}
+
+#copywriting {
+    margin-top: -2px;
+    width: 980px;
+    border-radius: 80px 0 80px 0;
+    background-color: white;
+    padding: 40px 50px 50px 50px;
+    border: 5px solid $primary_color;
+    box-shadow: -15px 20px 0 $primary_color;
+    float: right;
+
+    h1 {
+        text-align: right;
+        margin: 0 40px 15px 0;
+        font-size: 44px;
+        color: #222;
+    }
+
+    p {
+        text-align: justify;
+        margin: 30px 0 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+        line-height: 36px;
+    }
+}
+
+article {
+    width: 100%;
+    margin-right: 0;
+    height: 500px;
+}
