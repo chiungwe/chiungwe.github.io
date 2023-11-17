@@ -3,11 +3,18 @@ $secondary_color: #26A69A;
 $tertiary_color: #FFB300;
 $quaternary_color: #EC407A;
 
-
 .d-flex {
     display: flex;
 }
 
 .p-relative {
     position: relative;
+}
+
+.bg-primary {
+    background-color: $primary_color;
+}
+
+.bg-gray {
+    background-color: #E3E3E3;
 }

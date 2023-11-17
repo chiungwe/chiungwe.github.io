@@ -1,0 +1,33 @@
+#main_view {
+    height: 684px;
+
+    img {
+        position: absolute;
+    }
+}
+
+#activity {
+    transform: translateY(-50%);
+    top: 24%;
+}
+
+#slogan {
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#chinese_name {
+    top: 30px;
+    right: 0;
+}
+
+#english_name {
+    left: 40px;
+    bottom: 30px;
+}
+
+#candidate {
+    top: 30px;
+    right: 70px;
+    z-index: 2;
+}

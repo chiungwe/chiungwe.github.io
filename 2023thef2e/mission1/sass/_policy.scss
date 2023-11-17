@@ -1,0 +1,47 @@
+#policy {
+    padding: 50px 0 80px 0;
+    text-align: center;
+}
+
+.policy_content {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+
+    div {
+        width: 379px;
+        height: 366px;
+        position: relative;
+        background-color: white;
+        border-radius: 8px;
+        text-align: left;
+        padding: 15px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 36px;
+            color: #222;
+        }
+
+        p {
+            margin: 0;
+            border-radius: 8px 0 8px 0;
+            background-color: $secondary_color;
+            width: 68px;
+            text-align: center;
+            padding: 9px 0;
+            font-size: 16px;
+            color: white;
+        }
+
+        li {
+            font-size: 16px;
+            line-height: 24px;
+            color: #333;
+        }
+
+        &:nth-of-type(2) {
+            top: 30px;
+        }
+    }
+}
