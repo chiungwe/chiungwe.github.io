@@ -4,19 +4,18 @@
 @import "../sass/policy";
 @import "../sass/donate";
 
-:root {
-    scroll-padding-top: 104px;
+#logo {
+    @include mobile {
+        width: 150px;
+        margin-left: 14px;
+    }
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    border-left: 5px solid $primary_color;
-    border-right: 5px solid $primary_color;
-    border-bottom: 5px solid $primary_color;
-    box-sizing: border-box;
+#menu {
+    display: none;
+    @include mobile {
+        margin-right: 14px;
+    }
 }
 
 header {
@@ -27,13 +26,19 @@ header {
     width: 100%;
     padding: 20px 0;
     z-index: 10;
-    box-shadow: 0 1px 0 rgba($color: #000000, $alpha: 0.15);
+    box-shadow: 0 1px 0 rgba($color: #000, $alpha: 0.15);
 
     .header_block {
         max-width: 1200px;
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .header_menu {
+        @include mobile {
+            display: none
+        };
     }
 
     div {
@@ -89,18 +94,25 @@ header {
     }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 #mark {
     position: absolute;
     bottom: 0px;
     left: 0;
+
+    @include mobile {
+        width: 3vw;
+    }
 }
 
 #copywriting {
+    @include mobile {
+        margin-top: 0;
+        padding: 15px 15px 20px 18px;
+        width: 80%;
+        border: 3px solid $primary_color;
+        box-shadow: -5px 5px 0 $primary_color;
+    }
     margin-top: -2px;
     width: 980px;
     border-radius: 80px 0 80px 0;
@@ -115,6 +127,12 @@ header {
         margin: 0 40px 15px 0;
         font-size: 44px;
         color: #222;
+        @include mobile {
+            font-size: 20px;
+            text-align: center;
+            margin: 10px 0 0;
+            word-break: keep-all;
+        }
     }
 
     p {
@@ -124,6 +142,12 @@ header {
         color: #333;
         font-weight: 700;
         line-height: 36px;
+
+        @include mobile {
+            font-size: 15px;
+            line-height: 22px;
+            margin: 20px 0 0;
+        }
     }
 }
 
@@ -132,9 +156,15 @@ article {
     margin-right: 0;
     height: 408px;
     position: relative;
+    @include mobile {
+        height: 90vw;
+    }
 }
 
 #news {
+    @include mobile {
+        display: none;
+    }
     padding: 50px 0;
     text-align: center;
 

@@ -1,12 +1,22 @@
 #policy {
     padding: 50px 0 80px 0;
     text-align: center;
+
+    @include mobile {
+        padding: 50px 0 50px 0;
+
+    }
 }
 
 .policy_content {
     margin-top: 50px;
     display: flex;
     gap: 30px;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
 
     div {
         width: 379px;
@@ -17,10 +27,20 @@
         text-align: left;
         padding: 15px;
 
+        @include mobile {
+            width: 90%;
+            height: auto;
+        }
+
         h2 {
             font-size: 24px;
             line-height: 36px;
             color: #222;
+
+            @include mobile {
+                font-size: 20px;
+                line-height: 30px;
+            }
         }
 
         p {
@@ -38,10 +58,18 @@
             font-size: 16px;
             line-height: 24px;
             color: #333;
+
+            @include mobile {
+                font-size: 15px;
+                line-height: 22px;
+            }
         }
 
         &:nth-of-type(2) {
             top: 30px;
+            @include mobile {
+                top: unset;
+            }
         }
     }
 }

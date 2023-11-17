@@ -1,6 +1,10 @@
 #main_view {
     height: 684px;
 
+    @include mobile {
+        height: 114vw;
+    }
+
     img {
         position: absolute;
     }
@@ -9,25 +13,49 @@
 #activity {
     transform: translateY(-50%);
     top: 24%;
+
+    @include mobile {
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 69vw;
+        top: 14vw;
+    }
 }
 
 #slogan {
     transform: translateY(-50%);
     top: 50%;
+    @include mobile {
+        width: 88vw;
+        top: 34vw;
+    }
 }
 
 #chinese_name {
     top: 30px;
     right: 0;
+    @include mobile {
+        display: none;
+    }
 }
 
 #english_name {
     left: 40px;
     bottom: 30px;
+    @include mobile {
+        width: 64vw;
+        left: 8vw;
+        bottom: 25vw;
+    }
 }
 
 #candidate {
     top: 30px;
     right: 70px;
     z-index: 2;
+    @include mobile {
+        width: 63vw;
+        right: 0;
+        top: 32vw;
+    }
 }

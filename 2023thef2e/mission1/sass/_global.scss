@@ -3,6 +3,34 @@ $secondary_color: #26A69A;
 $tertiary_color: #FFB300;
 $quaternary_color: #EC407A;
 
+@mixin mobile {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+:root {
+    scroll-padding-top: 104px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $primary_color;
+    border-left: 5px solid $primary_color;
+    border-right: 5px solid $primary_color;
+    border-bottom: 5px solid $primary_color;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
 .d-flex {
     display: flex;
 }
