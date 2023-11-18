@@ -1,10 +1,22 @@
 #donate {
-    @include mobile {
+    @include tablet {
         height: 140vw;
     }
 
     height: 572px;
     position: relative;
+}
+
+#donate_title {
+    @include mobile {
+        max-width: 30vw;
+    }
+}
+
+#totalamount {
+    @include mobile {
+        max-width:  30vw;
+    }
 }
 
 .donate_bg {
@@ -17,7 +29,7 @@
     background: url(../image/bg-donate.svg) center right no-repeat;
     background-size: cover;
 
-    @include mobile {
+    @include tablet {
         background: url(../image/bg-donate.svg) center right 40% no-repeat;
         background-size: cover;
     }
@@ -37,15 +49,122 @@
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
+    width: 40vw;
     background-color: white;
-    width: 675px;
-    height: 400px;
     border-radius: 80px;
     padding: 30px;
     text-align: center;
-    @include mobile {
+    @include tablet {
         width: calc(100% - 100px);
         transform: translate(-50%, -50%);
         left: 50%;
+    }
+
+    @include mobile {
+        padding: 50px 30px;
+    }
+
+    h3 {
+        @include mobile {
+            word-break: keep-all;
+            line-height: 30px;
+        }
+    }
+
+    h4 {
+        color: $primary_color;
+        margin: 15px;
+        font-size: 60px;
+
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+
+    &_title {
+        margin: 0;
+        padding-bottom: 14px;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 900;
+    }
+
+    button {
+        margin: 0 6px;
+    }
+}
+
+.donate_plan {
+    cursor: pointer;
+    padding: 0 30px 20px;
+    display: grid;
+    gap: 10px;
+
+    &_item {
+        border: 2px solid #A9A9A9;
+        border-radius: 8px;
+        padding: 10px 0;
+
+        &:nth-of-type(1) {
+            grid-column: 1 ;
+            grid-row: 1 ;
+        }
+
+        &:nth-of-type(2) {
+            grid-column: 2 ;
+            grid-row: 1 ;
+        }
+
+        &:nth-of-type(3) {
+            grid-column: 3 ;
+            grid-row: 1 ;
+        }
+
+        &:nth-of-type(4) {
+            grid-row: 2;
+            grid-column: 1 / span 3;
+        }
+
+        h6, h5 {
+            margin: 0;
+        }
+
+        h6 {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 30px;
+            color: $primary_color;
+            padding: 5px 0;
+        }
+
+        span {
+            font-size: 13px;
+            line-height: 20px;
+            color: #999;
+        }
+
+        label {
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 30px;
+            padding-right: 10px;
+        }
+
+        input {
+            outline: none;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #B9B9B9;
+        }
+
+        &.active {
+            border: 3px solid $primary_color;
+            box-sizing: border-box;
+        }
     }
 }

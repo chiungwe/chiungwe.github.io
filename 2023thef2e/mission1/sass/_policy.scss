@@ -2,9 +2,15 @@
     padding: 50px 0 80px 0;
     text-align: center;
 
-    @include mobile {
+    @include tablet {
         padding: 50px 0 50px 0;
 
+    }
+}
+
+#policy_title {
+    @include mobile {
+        max-width: 50vw;
     }
 }
 
@@ -13,21 +19,24 @@
     display: flex;
     gap: 30px;
 
-    @include mobile {
+    @include tablet {
         flex-direction: column;
         align-items: center;
     }
 
     div {
         width: 379px;
-        height: 366px;
+        // height: 366px;
+        height: 445px;
         position: relative;
         background-color: white;
         border-radius: 8px;
         text-align: left;
         padding: 15px;
+        transition: all 3s;
+        cursor: pointer;
 
-        @include mobile {
+        @include tablet {
             width: 90%;
             height: auto;
         }
@@ -37,7 +46,7 @@
             line-height: 36px;
             color: #222;
 
-            @include mobile {
+            @include tablet {
                 font-size: 20px;
                 line-height: 30px;
             }
@@ -54,12 +63,16 @@
             color: white;
         }
 
+        ol {
+            padding-inline-start: 15px;
+        }
+
         li {
             font-size: 16px;
             line-height: 24px;
             color: #333;
 
-            @include mobile {
+            @include tablet {
                 font-size: 15px;
                 line-height: 22px;
             }
@@ -67,8 +80,15 @@
 
         &:nth-of-type(2) {
             top: 30px;
-            @include mobile {
+            @include tablet {
                 top: unset;
+            }
+        }
+
+        &:hover {
+            p {
+                opacity: 0;
+                display: none;
             }
         }
     }

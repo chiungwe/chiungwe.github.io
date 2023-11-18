@@ -1,7 +1,7 @@
 #main_view {
     height: 684px;
 
-    @include mobile {
+    @include tablet {
         height: 114vw;
     }
 
@@ -14,7 +14,7 @@
     transform: translateY(-50%);
     top: 24%;
 
-    @include mobile {
+    @include tablet {
         transform: translate(-50%, -50%);
         left: 50%;
         width: 69vw;
@@ -25,7 +25,7 @@
 #slogan {
     transform: translateY(-50%);
     top: 50%;
-    @include mobile {
+    @include tablet {
         width: 88vw;
         top: 34vw;
     }
@@ -34,7 +34,7 @@
 #chinese_name {
     top: 30px;
     right: 0;
-    @include mobile {
+    @include tablet {
         display: none;
     }
 }
@@ -42,7 +42,7 @@
 #english_name {
     left: 40px;
     bottom: 30px;
-    @include mobile {
+    @include tablet {
         width: 64vw;
         left: 8vw;
         bottom: 25vw;
@@ -53,7 +53,7 @@
     top: 30px;
     right: 70px;
     z-index: 2;
-    @include mobile {
+    @include tablet {
         width: 63vw;
         right: 0;
         top: 32vw;

@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>從喵的眼中，看見台灣 - 喵立翰（Miao Li-Han）</title>
     <link rel="icon" href="./image/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.4/swiper-bundle.css" integrity="sha512-eCyejMSBO5OZwV8DiCj9XETkTRH4FQBrvxod2fd12/xDKIzsc26NzmUZWucuvOXxOCooPb5NDqP5iOD8SzeOyQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/index.min.css">
 </head>
 <body>
     <header>
         <div class="d-flex header_block">
-            <img src="./image/logo.svg" alt="LOGO" srcset="" id="logo">
+            <a href="#"><img src="./image/logo.svg" alt="LOGO" srcset="" id="logo"></a>
             <div class="d-flex header_menu">
                 <ul class="d-flex">
-                    <li class="active"><a href="#copywriting">候選人主張</a></li>
+                    <li><a href="#copywriting">候選人主張</a></li>
                     <li><a href="#news">最新活動</a></li>
                     <li><a href="#policy">政策議題</a></li>
                     <li><a href="#service">民眾服務信箱</a></li>
                 </ul>
-                <button>
-                    <a href="#donate"><img src="./image/button1.svg" alt="" srcset=""></a>
+                <button class="btn btn-sm">
+                    <a href="#donate">
+                        <img src="./image/money.svg" alt="icon" loading="lazy">
+                        <p>小額捐款</p>
+                    </a>
                 </button>
             </div>
-            <img src="./image/menu.svg" alt="" id="menu">
+            <img src="./image/menu.svg" alt="menu" id="menu" loading="lazy">
         </div>
     </header>
     <main class="bg-gray">
@@ -32,11 +36,11 @@
                 <img id="activity" src="./image/activity.svg" alt="2023 THE F2E 立委競選" srcset="">
                 <img id="slogan" src="./image/slogan.svg" alt="從喵的眼中，看見台灣" srcset="./image/m/slogan.svg 2x">
                 <img id="candidate" src="./image/candidate.svg" alt="喵立翰">
-                <img id="chinese_name" src="./image/chinese_name.svg" alt="喵立翰" srcset="">
+                <img id="chinese_name" src="./image/chinese_name.svg" alt="喵立翰" srcset="" loading="lazy">
                 <img id="english_name" src="./image/english_name.svg" alt="Miao Li-Han" srcset="./image/m/english_name.svg 2x">
             </div>
-            <article>
-                <img id="mark" src="./image/mark.svg" alt="" srcset="">
+            <article class="d-flex justify-content-right">
+                <img id="mark" src="./image/mark.svg" alt="KEEP IT POSSIBLE" srcset="">
                 <div id="copywriting" name="copywriting">
                     <h1>護航台灣幸福經濟 從照顧每一隻貓咪開始</h1>
                     <p>我堅信，藉由推動更完善的貓咪福利和相關政策，更是間接地投資於台灣的未來。畢竟，民眾的身心健康與工作熱情是推動經濟的核心動力。透過完善的貓咪福利政策，為台灣的 GDP 經濟帶來巨大效益。 </p>
@@ -44,33 +48,88 @@
                 </div>
             </article>
             <div id="news" name="news">
-                <img src="./image/news.svg" alt="">
-                <ul>
-                    <li>
-                        <span></span>
-                        <img src="" alt="">
-                        <h2>參與台北寵物論壇 爭取貓咪友善環境</h2>
-                        <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
-                    </li>
-                    <li>
-                        <span>2023.12.26</span>
-                        <img src="" alt="">
-                        <h2>帶著你的貓耳，來和我一起走！</h2>
-                        <p>街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。</p>
-                    </li>
-                    <li>
-                        <span>2023.12.20</span>
-                        <img src="" alt="">
-                        <h2>收容所模特兒大比拼！</h2>
-                        <p>活動三消息內容：今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！</p>
-                    </li>
-                </ul>
+                <img id="news_title" src="./image/news.svg" alt="最新活動" loading="lazy">
+                <div id="news_in_mobile">
+                    <div class="swiper-container" id="news_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="news_card">
+                                    <div class="news_img">
+                                        <img src="./image/news1.svg" alt="參與台北寵物論壇 爭取貓咪友善環境" loading="lazy">
+                                    </div>
+                                    <div class="news_date"><p>26</p><span>DEC.</span></div>
+                                    <div class="news_content">
+                                        <h3>參與台北寵物論壇 爭取貓咪友善環境</h3>
+                                        <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news_card">
+                                    <div class="news_img">
+                                        <img src="./image/news2.svg" alt="帶著你的貓耳，來和我一起走！<" loading="lazy">
+                                    </div>
+                                    <div class="news_date"><p>24</p><span>DEC.</span></div>
+                                    <div class="news_content">
+                                        <h3>帶著你的貓耳，來和我一起走！</h3>
+                                        <p>街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。</p>                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news_card">
+                                    <div class="news_img">
+                                        <img src="./image/news3.svg" alt="收容所模特兒大比拼！" loading="lazy">
+                                    </div>
+                                    <div class="news_date"><p>20</p><span>DEC.</span></div>
+                                    <div class="news_content">
+                                        <h3>收容所模特兒大比拼！</h3>
+                                        <p>活動三消息內容：今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div id="news_in_desktop">
+                    <div class="news_card">
+                        <div class="news_img">
+                            <img src="./image/news1.svg" alt="參與台北寵物論壇 爭取貓咪友善環境" loading="lazy">
+                        </div>
+                        <div class="news_date"><p>26</p><span>DEC.</span></div>
+                        <div class="news_content">
+                            <h3>參與台北寵物論壇 爭取貓咪友善環境</h3>
+                            <p>炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。</p>
+                        </div>
+                    </div>
+                    <div class="news_card">
+                        <div class="news_img">
+                            <img src="./image/news2.svg" alt="" loading="lazy">
+                        </div>
+                        <div class="news_content">
+                            <div class="news_date">2023.12.24</div>
+                            <h3>帶著你的貓耳，來和我一起走！</h3>
+                            <p>街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「貓咪友善環境」政策的決心。</p>                            
+                        </div>
+                    </div>
+                    <div class="news_card">
+                        <div class="news_img">
+                            <img src="./image/news3.svg" alt="" loading="lazy">
+                        </div>
+                        <div class="news_content">
+                            <div class="news_date">2023.12.20</div>
+                            <h3>收容所模特兒大比拼！</h3>
+                            <p>活動三消息內容：今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <section id="policy" name="policy" class="bg-primary">
         <div class="container">
-            <img src="./image/policy.svg" alt="">
+            <img id="policy_title" src="./image/policy.svg" alt="政策議題" loading="lazy">
             <div class="policy_content">
                 <div>
                     <p>政策一</p>
@@ -106,15 +165,106 @@
         <div class="donate_bg"></div>
         <div class="container">
             <div class="donate_content">
-                <img src="./image/donate.svg" alt="">
+                <img src="./image/donate.svg" alt="小額捐款" loading="lazy" id="donate_title">
                 <h3>您的小筆捐款，是每隻毛孩未來的大大動力！</h3>
-                
+                <img src="./image/totalamount.svg" alt="累積總金額" loading="lazy" id="totalamount">
+                <h4>NT$<span>987,344,333</span></h4>
+                <button class="btn btn-sm">
+                    <a href="javascript:;">
+                        <img src="./image/money.svg" alt="icon" loading="lazy">
+                        <p>前往捐款</p>
+                    </a>
+                </button>
+            </div>
+            <div class="donate_content">
+                <p class="donate_content_title">選擇捐款方案</p>
+                <form>
+                    <div class="donate_plan">
+                        <div class="active donate_plan_item">
+                            <h6>喵星人之友</h6>
+                            <h5>NT$600</h5>
+                            <span>已有9957人贊助</span>
+                        </div>
+                        <div class="donate_plan_item">
+                            <h6>喵星大使</h6>
+                            <h5>NT$600</h5>
+                            <span>已有2000人贊助</span>
+                        </div>
+                        <div class="donate_plan_item">
+                            <h6>喵星傳奇</h6>
+                            <h5>NT$600</h5>
+                            <span>已有9957人贊助</span>
+                        </div>
+                        <div class="donate_plan_item">
+                            <label for="">自訂捐款金額</label>
+                            <input type="text" placeholder="請輸入捐款金額">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-sm btn-line cancel">
+                            <a href="javascript:;">
+                                <p>返回</p>
+                            </a>
+                        </button>
+                        <button class="btn btn-sm">
+                            <a href="javascript:;">
+                                <img src="./image/money.svg" alt="icon" loading="lazy">
+                                <p>我要捐款</p>
+                            </a>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
     <section id="service" name="service" class="bg-gray">
-        <div class="container"></div>
+        <div class="container p-relative">
+            <div id="service_block">
+                <div id="service_content">
+                    <img src="./image/service.svg" alt="民眾服務信箱" loading="lazy">
+                    <h6>您的聲音，我們的行動！</h6>
+                    <p>親愛的鄉親，每一位市民的意見都是我們社區前進的原動力。無論大小事，我都誠摯希望聽到您的建議。分享您的想法，一同為我們的未來打造更美好！</p>
+                </div>
+                <form action="" id="service_form">
+                    <input type="text" placeholder="您的姓名">
+                    <input type="text" placeholder="您的Email">
+                    <input type="text" placeholder="您的手機">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="您的建言"></textarea>
+                    <button class="btn btn-lg" type="button" onclick=""><p>送出意見</p></button>
+                </form>
+            </div>
+        </div>
     </section>
-    <footer class="bg-primary"></footer>
+    <footer class="bg-primary">
+        <div class="container p-relative">
+            <img id="cat" src="./image/cat.svg" alt="貓" loading="lazy">
+            <a href="#"><img id="logo2" src="./image/logo2.svg" alt="LOGO" loading="lazy"></a>
+            <nav>
+                <div>
+                    <h5>Menu</h5>
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#copywriting">候選人主張</a></li>
+                        <li><a href="#news">最新活動</a></li>
+                        <li><a href="#policy">政策議題</a></li>
+                        <li><a href="#service">民眾服務信箱</a></li>
+                        <li><a href="#donate">小額捐款</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Office information</h5>
+                    <p class="text-left">地址：台北市喵星區毛茸茸大道88號喵喵大樓3樓</p>
+                    <p class="text-left">電話：(02) 888-5678</p>
+                    <p class="text-left">郵件：meowoffice@linmeow.tw</p>
+                </div>
+            </nav>
+            <p>版權聲明：© 2023 喵立翰（Miao Li-Han） 版權所有。</p>
+        </div>
+    </footer>
+    <div class="lightbox">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.4/swiper-bundle.js" integrity="sha512-+cdO0hlQy815H6TSp1JWiV4XV2HIrkM+v1MlDIWqbpXU2mS+a6k1P+nzXIUytpuwWpzfHf0rIrEP0WXYs+G3lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

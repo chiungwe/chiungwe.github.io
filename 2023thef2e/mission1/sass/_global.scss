@@ -3,14 +3,22 @@ $secondary_color: #26A69A;
 $tertiary_color: #FFB300;
 $quaternary_color: #EC407A;
 
-@mixin mobile {
+// font-family: 'Noto Sans TC', sans-serif;
+
+@mixin tablet {
     @media screen and (max-width: 1023px) {
         @content;
     }
 }
 
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
 :root {
-    scroll-padding-top: 104px;
+    scroll-padding-top: 97px;
 }
 
 html {
@@ -19,10 +27,7 @@ html {
 
 body {
     background-color: $primary_color;
-    border-left: 5px solid $primary_color;
-    border-right: 5px solid $primary_color;
-    border-bottom: 5px solid $primary_color;
-    box-sizing: border-box;
+    padding: 0 5px 5px;
 }
 
 .container {
@@ -35,6 +40,22 @@ body {
     display: flex;
 }
 
+.justify-content-right {
+    justify-content: right;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
 .p-relative {
     position: relative;
 }
@@ -45,4 +66,67 @@ body {
 
 .bg-gray {
     background-color: #E3E3E3;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: $primary_color;
+
+    a {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        margin: 0;
+        padding-left: 7px;
+        font-size: 20px;
+        color: white;
+    }
+
+    img {
+        filter: brightness(0) invert(1);
+    }
+
+    &.btn-sm {
+        width: 160px;
+        height: 52px;
+        line-height: 52px;
+    }
+
+    &.btn-lg {
+        width: 170px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 100px;
+    }
+
+    &.btn-line {
+        background-color: white;
+        border: $primary_color 3px solid;
+        box-sizing: border-box;
+
+        p {
+            color: $primary_color;
+        }
+
+        img {
+            filter: unset;
+        }
+    }
+
+    &.cancel {
+        width: 100px;
+    }
 }
