@@ -16,6 +16,7 @@
 #logo3 {
     display: none;
     @include tablet {
+        display: block;
         position: absolute;
         left: 5%;
         top: 24px;
@@ -275,9 +276,5 @@ footer {
         width: 90vw;
         left: 50%;
     }
-
-}
-
-.lightbox {
 
 }
