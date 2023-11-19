@@ -19,6 +19,10 @@ $quaternary_color: #EC407A;
 
 :root {
     scroll-padding-top: 119px;
+
+    @include mobile {
+        scroll-padding-top: 76px;
+    }
 }
 
 html {

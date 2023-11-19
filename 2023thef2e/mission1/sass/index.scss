@@ -133,6 +133,10 @@ header {
     }
 }
 
+main {
+    overflow: hidden;
+}
+
 #mark {
     position: absolute;
     bottom: -35px;

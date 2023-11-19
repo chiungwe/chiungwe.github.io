@@ -80,11 +80,12 @@
 
     h4 {
         color: $primary_color;
-        margin: 15px;
-        font-size: 60px;
+        margin: 1.4rem 0;
+        font-size: 3rem;
 
         @include mobile {
             font-size: 30px;
+            margin: 15px 0;
         }
     }
 
