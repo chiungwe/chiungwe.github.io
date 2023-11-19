@@ -1,0 +1,95 @@
+#policy {
+    padding: 50px 0 80px 0;
+    text-align: center;
+
+    @include tablet {
+        padding: 50px 0 50px 0;
+
+    }
+}
+
+#policy_title {
+    @include mobile {
+        max-width: 50vw;
+    }
+}
+
+.policy_content {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div {
+        width: 379px;
+        // height: 366px;
+        height: 445px;
+        position: relative;
+        background-color: white;
+        border-radius: 8px;
+        text-align: left;
+        padding: 15px;
+        transition: all 3s;
+        cursor: pointer;
+
+        @include tablet {
+            width: 90%;
+            height: auto;
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 36px;
+            color: #222;
+
+            @include tablet {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        p {
+            margin: 0;
+            border-radius: 8px 0 8px 0;
+            background-color: $secondary_color;
+            width: 68px;
+            text-align: center;
+            padding: 9px 0;
+            font-size: 16px;
+            color: white;
+        }
+
+        ol {
+            padding-inline-start: 15px;
+        }
+
+        li {
+            font-size: 16px;
+            line-height: 24px;
+            color: #333;
+
+            @include tablet {
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+
+        &:nth-of-type(2) {
+            top: 30px;
+            @include tablet {
+                top: unset;
+            }
+        }
+
+        &:hover {
+            p {
+                opacity: 0;
+                display: none;
+            }
+        }
+    }
+}

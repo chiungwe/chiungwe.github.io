@@ -1,0 +1,79 @@
+#main_view {
+    height: 684px;
+
+    @include tablet {
+        height: 114vw;
+    }
+
+    img {
+        position: absolute;
+    }
+}
+
+#activity {
+    transform: translateY(-50%);
+    top: 24%;
+
+    @include tablet {
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 69vw;
+        top: 14vw;
+    }
+}
+
+#slogan {
+    z-index: 2;
+    transform: translateY(-50%);
+    top: 50%;
+    @include tablet {
+        display: none;
+    }
+}
+
+#slogan_m {
+    transform: translateY(-50%);
+    display: none;
+    @include tablet {
+        display: block;
+        width: 88vw;
+        top: 34vw;
+    }
+}
+
+#chinese_name {
+    top: 30px;
+    right: 0;
+    @include tablet {
+        display: none;
+    }
+}
+
+#english_name {
+    left: 40px;
+    bottom: 30px;
+    @include tablet {
+        display: none;
+    }
+}
+
+#english_name_m {
+    display: none;
+    @include tablet {
+        display: block;
+        width: 64vw;
+        left: 8vw;
+        bottom: 25vw;
+    }
+}
+
+#candidate {
+    top: 30px;
+    right: 70px;
+    z-index: 2;
+    @include tablet {
+        width: 63vw;
+        right: 0;
+        top: 32vw;
+    }
+}
