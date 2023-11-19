@@ -21,6 +21,20 @@
     @include tablet {
         display: block;
     }
+
+    .swiper-pagination {
+        position: relative;
+        bottom: -25px;
+    }
+
+    .swiper-pagination-bullet {
+        background: white;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $primary_color;
+    }
 }
 
 #news_in_desktop {
@@ -80,19 +94,7 @@
 #news_swiper {
     position: relative;
     padding-top: 30px;
-
-    .swiper-pagination {
-        bottom: -40px;
-    }
-
-    .swiper-pagination-bullet {
-        background: white;
-        opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-        background: $primary_color;
-    }
+    overflow-x: hidden;
 }
 
 .news {

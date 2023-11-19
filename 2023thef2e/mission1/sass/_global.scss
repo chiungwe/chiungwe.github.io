@@ -18,7 +18,7 @@ $quaternary_color: #EC407A;
 }
 
 :root {
-    scroll-padding-top: 97px;
+    scroll-padding-top: 119px;
 }
 
 html {
@@ -28,6 +28,10 @@ html {
 body {
     background-color: $primary_color;
     padding: 0 5px 5px;
+
+    &.hide {
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -66,6 +70,10 @@ body {
 
 .bg-gray {
     background-color: #E3E3E3;
+}
+
+.text-primary {
+    color: $primary_color;
 }
 
 .text-left {
@@ -128,5 +136,74 @@ body {
 
     &.cancel {
         width: 100px;
+    }
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000, $alpha: 0.5);
+        z-index: -1;
+    }
+
+    &_body {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &_content {
+        max-width: 500px;
+        max-height: 300px;
+        background-color: #FAFAFA;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        width: 90%;
+        height: 100%;
+        border-radius: 80px;
+        padding: 30px;
+        text-align: center;
+
+        @include mobile() {
+            max-width: 300px;
+            max-height: 300px;
+        }
+
+        h3 {
+            margin-top: 50px;
+            font-size: 24px;
+            line-height: 36px;
+            @include mobile {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        h5 {
+            margin-bottom: 50px;
+            font-size: 16px;
+            line-height: 24px;
+
+            @include mobile {
+                font-size: 15px;
+                line-height: 22px;
+                margin-bottom: 20px;
+            }
+        }
     }
 }

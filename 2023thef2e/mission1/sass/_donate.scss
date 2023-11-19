@@ -8,8 +8,13 @@
 }
 
 #donate_title {
+    @include tablet {
+        padding-top: 3vw;
+    }
+
     @include mobile {
         max-width: 30vw;
+        padding-top: 10vw;
     }
 }
 
@@ -58,10 +63,13 @@
         width: calc(100% - 100px);
         transform: translate(-50%, -50%);
         left: 50%;
+        height: 47vw;
     }
 
     @include mobile {
-        padding: 50px 30px;
+        width: calc(100% - 70px);
+        padding: 50px 20px;
+        height: 90vw;
     }
 
     h3 {
@@ -83,7 +91,7 @@
 
     &_title {
         margin: 0;
-        padding-bottom: 14px;
+        padding-bottom: 16px;
         font-size: 20px;
         line-height: 30px;
         font-weight: 900;
@@ -99,6 +107,12 @@
     padding: 0 30px 20px;
     display: grid;
     gap: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @include tablet {
+        padding: 0 0 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
     &_item {
         border: 2px solid #A9A9A9;
@@ -118,11 +132,20 @@
         &:nth-of-type(3) {
             grid-column: 3 ;
             grid-row: 1 ;
+            @include tablet {
+                grid-column: 1 ;
+                grid-row: 2 ;
+            }
         }
 
         &:nth-of-type(4) {
             grid-row: 2;
             grid-column: 1 / span 3;
+
+            @include tablet {
+                grid-column: 2 ;
+                grid-row: 2 ;
+            }
         }
 
         h6, h5 {
@@ -133,6 +156,10 @@
             font-size: 20px;
             line-height: 30px;
             font-weight: bold;
+            @include mobile {
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
 
         h5 {
@@ -153,6 +180,12 @@
             font-size: 20px;
             line-height: 30px;
             padding-right: 10px;
+            @include tablet {
+                display: block;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 0 15px;
+            }
         }
 
         input {
@@ -160,6 +193,11 @@
             padding: 10px 12px;
             border-radius: 8px;
             border: 1px solid #B9B9B9;
+
+            @include tablet {
+                width: 80%;
+                padding: 5px 12px;
+            }
         }
 
         &.active {

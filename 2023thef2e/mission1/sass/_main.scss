@@ -23,9 +23,19 @@
 }
 
 #slogan {
+    z-index: 2;
     transform: translateY(-50%);
     top: 50%;
     @include tablet {
+        display: none;
+    }
+}
+
+#slogan_m {
+    transform: translateY(-50%);
+    display: none;
+    @include tablet {
+        display: block;
         width: 88vw;
         top: 34vw;
     }
@@ -43,6 +53,14 @@
     left: 40px;
     bottom: 30px;
     @include tablet {
+        display: none;
+    }
+}
+
+#english_name_m {
+    display: none;
+    @include tablet {
+        display: block;
         width: 64vw;
         left: 8vw;
         bottom: 25vw;
