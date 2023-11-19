@@ -201,7 +201,7 @@ footer {
     padding: 10px 0;
     nav {
         display: flex;
-        justify-content: right;
+        justify-content: flex-end;
         @include tablet {
             justify-content: space-around;
         }
