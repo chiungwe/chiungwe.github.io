@@ -74,7 +74,6 @@
 
     h3 {
         @include mobile {
-            word-break: keep-all;
             line-height: 30px;
         }
     }
