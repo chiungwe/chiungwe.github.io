@@ -76,6 +76,7 @@ function closeDonate() {
     document.getElementById("replyDonate").style.display= "none";
     document.getElementById("Donate_form").reset();
     document.body.classList.remove('hide');
+    closeDonatePlan()
 }
 
 function openMenu() {
